@@ -1,11 +1,14 @@
 import 'dart:ui';
+import 'package:chewie/chewie.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:livfluence_main/constants.dart';
 import 'package:livfluence_main/screens/Login_otp.dart';
+import 'package:video_player/video_player.dart';
+import 'package:livfluence_main/controllers/loginController.dart';
 
-class WelcomePage extends StatelessWidget {
+class WelcomePage extends GetView<LoginController> {
   WelcomePage({super.key});
 
   // text editing controllers
@@ -105,7 +108,9 @@ class WelcomePage extends StatelessWidget {
                             IconButton(
                               icon: Image.asset('assets/images/google.png'),
                               iconSize: 50,
-                              onPressed: () {},
+                              onPressed: () {
+                                controller.login();
+                              },
                             ),
                             SizedBox(
                               width: 37,

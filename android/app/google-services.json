@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "638215341923",
+    "project_id": "livfluence",
+    "storage_bucket": "livfluence.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:638215341923:android:551465ca5e03a29a737556",
+        "android_client_info": {
+          "package_name": "com.example.livfluence_main"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "638215341923-33khof2r57imdmjk6f6ion1ga1oopaj5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.livfluence_main",
+            "certificate_hash": "27ac0c02d89afe7044b3282ce882913c19f9d400"
+          }
+        },
+        {
+          "client_id": "638215341923-ep6p0eg18kt0qp62mvg2dqf91vg0u4dq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8lPDwv0LDxzVG12lNswo5bc6zf3mGL2k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "638215341923-ep6p0eg18kt0qp62mvg2dqf91vg0u4dq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

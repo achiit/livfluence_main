@@ -5,22 +5,17 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 import 'package:livfluence_main/constants.dart';
+import 'package:livfluence_main/screens/enter_otp.dart';
 
-class LoginOtp extends StatefulWidget {
+import '../controllers/loginController.dart';
+
+class LoginOtp extends GetView<LoginController> {
   LoginOtp({super.key});
 
-  @override
-  State<LoginOtp> createState() => _LoginOtpState();
-}
-
-class _LoginOtpState extends State<LoginOtp> {
   // text editing controllers
   final usernameController = TextEditingController();
 
   final passwordController = TextEditingController();
-
-  // sign user in method
-  void signUserIn() {}
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +40,7 @@ class _LoginOtpState extends State<LoginOtp> {
           child: Column(
             children: [
               Container(
-                height: size.height * 0.1,
+                height: size.height * 0.036,
               ),
               Text(
                 'Welcome',
@@ -128,22 +123,13 @@ class _LoginOtpState extends State<LoginOtp> {
                 child: MaterialButton(
                   minWidth: 258,
                   onPressed: () {
-                    setState(() {
-                      _isLoading = true;
-                    });
-
-                    Future.delayed(Duration(seconds: 2), () {
-                      setState(() {
-                        _isLoading = false;
-                      });
-/*                       Navigator.push(context, MaterialPageRoute(builder: (context) => Verificatoin())); */
-                    });
+                    Get.to(Authenticate_otp());
                   },
                   color: '#D41717'.toColor(),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(9)),
                   padding: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
-                  child: _isLoading
+                  child: /*_isLoading
                       ? Container(
                           width: 20,
                           height: 20,
@@ -152,11 +138,12 @@ class _LoginOtpState extends State<LoginOtp> {
                             color: Colors.black,
                             strokeWidth: 2,
                           ),
-                        )
-                      : Text(
-                          "Send",
-                          style: TextStyle(color: Colors.white, fontSize: 24),
-                        ),
+                        ) 
+                      :*/
+                      Text(
+                    "Send",
+                    style: TextStyle(color: Colors.white, fontSize: 24),
+                  ),
                 ),
               ),
               SizedBox(
@@ -201,7 +188,9 @@ class _LoginOtpState extends State<LoginOtp> {
                     IconButton(
                       icon: Image.asset('assets/images/google.png'),
                       iconSize: 20,
-                      onPressed: () {},
+                      onPressed: () {
+                        controller.login();
+                      },
                     ),
                     SizedBox(
                       width: 28,
